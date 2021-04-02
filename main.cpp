@@ -135,7 +135,8 @@ class Game{
                 "3. type atas to move up" << endl <<
                 "4. type bawah to move down" << endl << 
                 "5. type help to show all the commands list" << endl <<
-                "6. type status to show map, current distance to kecoa, and robot health" << endl << endl;
+                "6. type serang to attack kecoa" << endl <<
+                "7. type status to show map, current distance to kecoa, and robot health" << endl << endl;
             } else if(gerak == "status"){
                 showMap();
                 int x =  kecoa->coordinate.first- robot->coordinate.first;
@@ -178,13 +179,14 @@ int main(){
                 int answer;
                 cout << "Level beated!\n";
                 cout << "Kecoa killed : " << game.robot->kecoa_killed << endl << endl;
-                cout << "Do you want to continue?" << endl << "1 = Yes" << endl << "2 = No" << endl << "answer : ";
+                cout << "Do you want to continue?" << endl << "1 = Yes" << endl << "2 = No" << endl << "Answer : ";
                 cin >> answer;
                 if (answer == 1){
                     game.continue_game();
                 } else {
                     break;
                 }
+                cout << endl;
             } else if(feedback == "jarak") {
                 cout << "Senjata tidak bisa menjangkau kecoa!" << endl; 
             } else if(feedback == "none") {
